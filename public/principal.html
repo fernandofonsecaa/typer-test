@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Typer Test</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/libs/selectize.default.css">
+    <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1 class="center">Typer Test</h1>
+        
+            <p class="frase center">Clique no botão<a class="tooltip-hover btn-floating btn-large waves-effect waves-light blue">
+                <i class="material-icons">shuffle</i> </a> abaixo para sortear uma frase e depois no campo de texto para iniciar</p>
+
+            <div class="center">
+                <img src="img/spinner.gif" alt="spinner" id="spinner">
+                <p id="erro">Ocorreu um erro, tente novamente</p>
+            </div>
+
+            <ul class="informacoes center">
+                <li> <i class="material-icons icones">description</i>
+                    <span id="tamanho-frase">5</span> palavras
+                </li>
+
+                <li>
+                    <li> <i class="material-icons icones">query_builder</i>
+                    <span id ="tempo-digitacao">0</span> segundos
+                </li>
+            </ul>
+
+            <textarea class="campo-digitacao campo-desativado"cols="30" rows="10" disabled></textarea>
+            <div class="botoes">
+            <a class="tooltip-hover btn-floating btn-large waves-effect waves-light red" id="botao-reinicia" title="Reiniciar">
+                <i class="material-icons">restore</i>
+            </a>
+            <a class="tooltip-hover btn-floating btn-large waves-effect waves-light green" id="botao-placar" title="Mostrar placar">
+                <i class="material-icons">assignment</i>
+            </a>
+            <a class="tooltip-hover btn-floating btn-large waves-effect waves-light blue" id="botao-frase" title="Trocar frase">
+                <i class="material-icons">shuffle</i>
+            </a>
+            <a class="tooltip-hover btn-floating btn-large waves-effect waves-light cyan" id="botao-frase-id" title="Buscar frase selecionada">
+                <i class="material-icons">repeat_one</i>
+            </a>
+            <input type="number" class="tooltip-hover" id="frase-id" min="0" title="Digite o Id da frase">
+
+            <div class="select-usuarios">
+                <select id="usuarios">
+                    <option>Fernando</option>
+                    <option>Pam</option>
+                </select>
+            </div>
+            <a class="tooltip-sync btn-floating btn-large waves-effect waves-light orange" id="botao-sync" title="Salvo com sucesso">
+                <i class="material-icons">sync</i>
+            </a>
+            </div>
+            
+            <ul class="center">
+            <li><span id="contador-caracteres">0</span> caracteres</li> 
+            <li><span id="contador-palavras">0</span> palavras</li>
+            </ul>
+
+            <section class="placar">
+                <h3 class="center">Placar</h3>
+                    <table class="centered bordered">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>N° de palavras</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+<script src="js/placar.js"></script>
+<script src="js/frase.js"></script>
+<script src="js/selectize.js"></script>
+<script src="js/tooltipster.bundle.min.js"></script>
+</html>
